@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  flask-app:
+    build: .
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    command: python app.py
+    networks:
+      - tunnel-network
+    restart: unless-stopped
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared_dp
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARED_TOKEN}
+    networks:
+      - tunnel-network
+    restart: unless-stopped
+
+networks:
+  tunnel-network:
+    name: tunnel-network
