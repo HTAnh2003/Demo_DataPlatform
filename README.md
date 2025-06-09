@@ -1,8 +1,11 @@
 # Demo\_DataPlatform
 
 ## Mô tả
-[OCR Model Finetune](https://huggingface.co/TienAnh/Finetune_OCR_1B): https://huggingface.co/TienAnh/Finetune_OCR_1B
+[OCR Model Finetune](https://huggingface.co/TienAnh/Finetune_OCR_1B): 
+https://huggingface.co/TienAnh/Finetune_OCR_1B
+
  - Mô hình OCR đã được tinh chỉnh từ Vintern1B (InternVL 1B) với 1 tỷ tham số, với khả năng nhận diện văn bản viết tay, chữ in và chữ ở các đối tượng trong thực tế.
+ - Chi tiết về cách finetuning mô hình OCR này có thể tham khảo [tại đây](https://github.com/HTAnh2003/VQA-CV-Final/blob/main/VQA-CV-Final-Training.ipynb).
 
 **Kiến trúc mô hình:**
 - Vision Encoder: Các mô hình dựa trên ViT, bộ mã hóa thị giác chuyển đổi hình ảnh đầu vào thành các đặc trưng dưới dạng vector cố định. 
